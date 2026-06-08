@@ -3,10 +3,10 @@ import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "../generated/prisma/client.js";
 import { Pool } from "pg";
 
-const connectionString = process.env.DIRECT_URL;
+const connectionString = process.env.DATABASE_URL;
 
 if (!connectionString) {
-  throw new Error("DIRECT_URL missing. Please set it in .env");
+  throw new Error("DATABASE_URL missing. Please set it in .env");
 }
 
 // const pool = new Pool({
